@@ -1,21 +1,73 @@
-/* Estilos base (móvil first) */
-.elemento {
-  width: 100%;
-  padding: 1rem;
+:root {
+  --color1: #ffe4e9;
+  --color2:#ff9b9b;
+  --color3: #f95f5f;
+  --color4: #545454;
+  --font-size: 16px;
+  --font-family: 'Arial', sans-serif;
 }
 
-/* Tablet (768px y superior) */
-@media screen and (min-width: 768px) , (max-width: 1023px) {
-  .elemento {
-    width: 50%;
-    padding: 2rem;
-  }
+body {
+  background-color: var(--color1);
+  font-family: var(--font-family);
 }
 
-/* Desktop (1024px y superior) */
-@media screen and (min-width: 1024px) {
-  .elemento {
-    width: 33.33%;
-    padding: 3rem;
-  }
+/* Navbar */
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color2);
+  box-sizing: border-box; 
+  box-shadow: #545454 0px 0px 10px;
+}
+
+.logo { 
+  justify-content: center;
+  height: 4rem;
+  width: auto;
+  margin-right: 2rem;
+} 
+.nav-links{
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+.menu a {
+  display: flex;
+  align-items: center;
+  color: var(--color1);
+  text-decoration: none;
+  padding-inline: 1rem;
+  margin-top: 1.5rem;
+}
+
+.menu a:hover {
+  display: flex;
+  border-radius: 10%;
+  color: var(--color4);
+  text-decoration: none;
+}
+
+/*Bienvenida */
+
+.fondobienvenida {
+  background-image: url(/Fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 70%;
+}
+
+
+/* Footer */
+.footer {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.5rem;
 }
