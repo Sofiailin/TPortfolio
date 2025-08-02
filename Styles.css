@@ -1,0 +1,21 @@
+/* Estilos base (móvil first) */
+.elemento {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Tablet (768px y superior) */
+@media screen and (min-width: 768px) , (max-width: 1023px) {
+  .elemento {
+    width: 50%;
+    padding: 2rem;
+  }
+}
+
+/* Desktop (1024px y superior) */
+@media screen and (min-width: 1024px) {
+  .elemento {
+    width: 33.33%;
+    padding: 3rem;
+  }
+}
