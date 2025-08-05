@@ -3,65 +3,173 @@
   --color2:#ff9b9b;
   --color3: #f95f5f;
   --color4: #545454;
-  --font-size: 16px;
-  --font-family: 'Arial', sans-serif;
+  --font-family: "Krub", sans-serif;
 }
 
 body {
-  background-color: var(--color1);
   font-family: var(--font-family);
+  background-color: var(--color1);
+}
+
+.titulo {
+  text-align: center;
+  color: var(--color3);
 }
 
 /* Navbar */
 
 .navbar{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--color2);
+  justify-content: space-evenly;
+  width: 100%;
   box-sizing: border-box; 
   box-shadow: #545454 0px 0px 10px;
+  margin-bottom: 1rem;
+  
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  border: none;
 }
 
 .logo { 
-  justify-content: center;
   height: 4rem;
   width: auto;
   margin-right: 2rem;
 } 
-.nav-links{
-  display: flex;
-  justify-content: center;
-  font-size: 0.8rem;
-}
-.menu a {
-  display: flex;
-  align-items: center;
-  color: var(--color1);
+
+.menu {
+  border: none;
+  background-color: var(--color1);
   text-decoration: none;
-  padding-inline: 1rem;
-  margin-top: 1.5rem;
+  color: var(--color4);
+}
+
+.menu a {
+  color: var(--color3);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
 }
 
 .menu a:hover {
   display: flex;
-  border-radius: 10%;
-  color: var(--color4);
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background-color: var(--color2);
+  color: var(--color1);
   text-decoration: none;
+  border: none;
+  transform: scale(1.2);
 }
 
-/*Bienvenida */
 
-.fondobienvenida {
-  background-image: url(/Fondo.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 15rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 70%;
+/* Imagen de fondo */
+
+.hero {
+    background-image: url(/Portfolio/TPortfolio/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    position: relative;
+    margin-bottom: 2rem;
+    opacity: 60%;
+}
+
+.contenido-hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;     
+    color: var(--color3);
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    text-align: center;
+    justify-content:center;
+}
+
+@media (min-width:768px) {
+    .boton { width: auto;
+    }}
+
+    
+.boton {
+    background-color: var(--color3);
+    color: var(--color1);
+    padding: 0.5rem 2rem;
+    margin-top: 3rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5rem;
+    width: 90%;
+    box-sizing: border-box;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton2 {
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    text-align: center;
+    width: 90%;
+    border: none;
+    transform: scale(1.2);
+}
+
+/* Sobre mi */
+
+
+.div {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto ;
+  gap: 10px; 
+  padding: 15px;
+}
+
+.div1, .div4{
+  color:var(--color4);
+  margin-bottom: 1rem;
+}
+
+.div2 img , .div3 img {
+  width: 50%;
+  height: auto;
+  border-radius: 3rem;
+  margin-left: 4rem;
+
+}
+        
+
+
+/* Skills */
+
+
+/* Experiencia */
+.exp {
+  color: var(--color4);
+  text-align: center;
+}
+
+/*Contacto*/
+.contact {
+  color: var(--color4);
+  text-align: center;
 }
 
 
@@ -70,4 +178,5 @@ body {
   padding: 0.5rem;
   text-align: center;
   font-size: 0.5rem;
+  color: var(--color4);
 }
