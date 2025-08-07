@@ -154,11 +154,204 @@ body {
   margin-left: 4rem;
 
 }
-        
+
+/* Proyectos */
+.texto{
+  text-align: center;
+  color: var(--color4);
+}
+.container {
+  margin-top: 10rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-left: 30%;
+}
+
+.container .card {
+    position: relative;
+    border-radius: 10px;
+}
+
+.container .card .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.7s;
+    z-index: 1;
+}
+
+.container .card:nth-child(1) .icon {
+    background: #e07768;
+}
+
+.container .card:nth-child(2) .icon {
+    background: #6eadd4;
+}
+
+.container .card:nth-child(3) .icon {
+    background: #4aada9;
+}
 
 
-/* Skills */
+.container .card .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: var(--color3);
+}
 
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: var(--color3);
+}
+
+.container .card .face {
+    width: 80%;
+    height: auto;
+    transition: 0.5s;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: #ff0057;
+    transform: translateY(0px);
+}
+
+.container .card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.container .card .face.face1 .content i{
+    max-width: 100px;
+}
+
+.container .card .face.face2 {
+    position: relative;
+    background: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: var(--color4);
+}
+
+.container .card .face.face2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    color: var(--color4);
+} 
+
+.container a {
+    text-decoration: none;
+    color: var(--color4);
+}
+/* Habilidades */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  grid-gap: 20px; /* Espacio entre elementos */
+  width: 80%;
+  margin: 0 auto;
+}
+
+.grid-item {
+  perspective: 1000px; /* Añade perspectiva para la rotación */
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.grid-item:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta la parte trasera durante la rotación */
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: var(--color3);
+  color: var(--color1);
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que llene el contenedor */
+}
 
 /* Experiencia */
 .exp {
